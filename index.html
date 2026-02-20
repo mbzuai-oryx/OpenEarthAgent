@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents.">
+  <meta name="keywords" content="Geospatial AI, Remote Sensing, Tool-Augmented Agents, GIS, Multimodal Reasoning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenEarthAgent</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+      <img src="assets/OpenEarthAgent_logo_transparent.png" width="350">
+
+      <!-- <h1 class="title is-1">OpenEarthAgent</h1> -->
+      <h2 class="subtitle is-4">A Unified Framework for Tool-Augmented Geospatial Agents</h2>
+
+      <div class="is-size-6">
+        Akashah Shabbir*, Muhammad Umer Sheikh*, Muhammad Akhtar Munir,  
+        Hiyam Debary, Mustansar Fiaz, Muhammad Zaigham Zaheer,  
+        Paolo Fraccaro, Fahad Shahbaz Khan,  
+        Muhammad Haris Khan, Xiao Xiang Zhu, Salman Khan
+      </div>
+
+      <div class="is-size-7 mt-2">
+        Mohamed bin Zayed University of Artificial Intelligence · IBM Research ·  
+        Linköping University · Technical University Munich · Technical University Munich · Australian National University
+      </div>
+
+      <br>
+
+      <div>
+        <a href="https://arxiv.org/abs/2602.17665" class="button is-dark is-rounded">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>Paper</span>
+        </a>
+
+        <a href="https://github.com/mbzuai-oryx/OpenEarthAgent" class="button is-dark is-rounded">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>Code</span>
+        </a>
+
+        <a href="https://huggingface.co/MBZUAI/OpenEarthAgent" class="button is-warning is-rounded">
+          <span>Model</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= Moving Sample Examples ================= -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop has-text-centered">
+
+    <h2 class="title is-5">OpenEarthAgent Geospatial Reasoning Qualitative results</h2>
+
+    <div class="slider-wrapper" style="display:flex; align-items:center; justify-content:center; gap:15px;">
+
+      <!-- Left Arrow -->
+      <button id="prevBtn" style="background:none; border:none; font-size:2rem; cursor:pointer;">
+        &#10094;
+      </button>
+
+      <!-- Slider Container -->
+      <div style="max-width:800px; overflow:hidden;">
+        <div id="imageSlider" style="display:flex; transition:transform 0.8s ease-in-out;">
+
+          <img src="assets/sample3.png" class="slider-img">
+          <img src="assets/sample2.png" class="slider-img">
+          <img src="assets/sample1.png" class="slider-img">
+
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button id="nextBtn" style="background:none; border:none; font-size:2rem; cursor:pointer;">
+        &#10095;
+      </button>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= End Moving Samples ================= -->
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <p class="mt-3">
+      <b>OpenEarthAgent</b> is a tool-augmented geospatial reasoning framework designed for 
+      structured, multi-step analysis over satellite imagery, SAR data, GIS layers, 
+      and spectral indices. Unlike perception-only models, OpenEarthAgent performs 
+      executable reasoning by orchestrating perceptual, GIS, spectral, and GeoTIFF-based tools 
+      through a unified JSON tool interface.
+    </p>
+
+    <p>
+      The accompanying corpus contains <b>14,538 training</b> and <b>1,169 evaluation</b> 
+      instances with over <b>100K reasoning steps</b>, spanning urban analysis, disaster assessment, 
+      environmental monitoring, transportation, and infrastructure tasks. 
+      The dataset integrates GIS operations and spectral computations including 
+      NDVI, NBR, and NDBI.
+    </p>
+    <img src="assets/teaser.png" width="800" class="mt-6">
+  </div>
+</section>
+
+<section class="section has-background-light">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Architecture</h2>
+    <img src="assets/OpenEarthAgent.png" width="800">
+    <p class="mt-3">
+      OpenEarthAgent decomposes geospatial tasks into multi-step reasoning trajectories. 
+      A unified tool registry standardizes perceptual, GIS, spectral, and raster operations. 
+      A central orchestrator validates tool calls, executes them, caches intermediate outputs, 
+      and maintains spatially grounded working memory.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Data & Training Pipeline</h2>
+    <img src="assets/pipeline.png" width="800">
+    <p class="mt-3">
+      The pipeline integrates optical, SAR, GIS, and multispectral sources into a unified 
+      JSON schema containing queries, multimodal inputs, and validated reasoning traces. 
+      Each trajectory undergoes deterministic replay to ensure geometric validity and 
+      tool correctness. Training is performed via supervised fine-tuning on multi-step 
+      tool trajectories with response-only masking.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>
+@misc{shabbir2026openearthagent,
+      title={OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents}, 
+      author={Akashah Shabbir and Muhammad Umer Sheikh and Muhammad Akhtar Munir and Hiyam Debary and Mustansar Fiaz and Muhammad Zaigham Zaheer and Paolo Fraccaro and Fahad Shahbaz Khan and Muhammad Haris Khan and Xiao Xiang Zhu and Salman Khan},
+      year={2026},
+      eprint={2602.17665},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.17665}, 
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      © 2025 OpenEarthAgent · Mohamed bin Zayed University of Artificial Intelligence
+    </p>
+  </div>
+</footer>
+<script>
+  const slider = document.getElementById("imageSlider");
+  const totalSlides = 3;
+  let index = 0;
+  let autoSlide;
+
+  function updateSlide() {
+    slider.style.transform = `translateX(-${index * 800}px)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  window.addEventListener("load", startAutoSlide);
+</script>
+</body>
+</html>

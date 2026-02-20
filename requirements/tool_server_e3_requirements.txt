@@ -1,8 +1,0 @@
-gdown
-fastapi==0.115.12
-uvicorn==0.34.2
-transformers
-clip
-open_clip_torch
-fairscale
-
