@@ -32,7 +32,7 @@ with more than 100K reasoning steps in the training split and over 7K reasoning 
 ---
 
 ## 📢  Latest Updates
-- **Feb-20-2025** OpenEarthAgent demo comming soon!
+- **Feb-20-2025** OpenEarthAgent demo coming soon!
 - **Feb-20-2025** OpenEarthAgent codebase is released along with evaluation and training scripts. 
 - **Feb-20-2025**: 📂 OpenEarthAgent model is released on **_HuggingFace_** [MBZUAI/OpenEarthAgent](https://huggingface.co/MBZUAI/OpenEarthAgent)
 - **Feb-20-2025**: 📜 Technical Report of OpenEarthAgent paper is released [arxiv link](https://arxiv.org/abs/2602.17665).
