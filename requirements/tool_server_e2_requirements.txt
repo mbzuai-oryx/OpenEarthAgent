@@ -1,0 +1,15 @@
+fastapi==0.115.12
+uvicorn==0.34.2
+einops==0.8.1
+peft==0.5.0
+transformers==4.33.2
+decord==0.6.0
+pytorchvideo==0.1.5
+numpy==1.26.4
+datasets
+sentencepiece
+protobuf==5.29.5
+accelerate==1.7.0
+bitsandbytes==0.43.2
+opencv-python==4.8.1.78
+shapely

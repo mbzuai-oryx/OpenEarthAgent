@@ -1,0 +1,249 @@
+# Basic directory configuration — modify this to your local path
+base_dir: OpenEarthAgent/tool_server/tool_workers
+log_folder: OpenEarthAgent/tool_server/tool_workers/logs/server_log
+tools_output_dir: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+partition: "q"
+default_calculate_gpus: 1
+default_calculate_cpus: 16
+default_control_cpus: 2
+default_control_gpus: 0
+retry_interval: 1
+request_timeout: 10
+
+controller_config:
+  worker_name: controller
+  job_name: controller
+  calculate_type: control
+  cmd:
+    script-addr: ./online_workers/controller.py
+    port: 20001
+    host: "0.0.0.0"
+
+
+tool_worker_config:
+  - Calculator:
+      worker_name: Calculator
+      job_name: calculator
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/Calculator_worker.py
+        port: 20002
+        host: "0.0.0.0"
+
+  - OCR:
+      worker_name: OCR
+      job_name: ocr
+      calculate_type: control
+      cuda_visible_devices: "3"
+      cmd:
+        script-addr: ./online_workers/OCR_worker.py
+        port: 20003
+        host: "0.0.0.0"
+  
+  - DrawBox:
+      worker_name: DrawBox
+      job_name: draw_box
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/DrawBox_worker.py
+        port: 20004
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+  - AddText:
+      worker_name: AddText
+      job_name: add_text
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/AddText_worker.py
+        port: 20005
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+  - GoogleSearch:
+      worker_name: GoogleSearch
+      job_name: google_search
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/GoogleSearch_worker.py
+        port: 20006
+        host: "0.0.0.0"
+        api-key: "SERPER_API_KEY"
+
+  - Plot:
+      worker_name: Plot
+      job_name: plot
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/Plot_worker.py
+        port: 20007
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+  - Solver:
+      worker_name: Solver
+      job_name: solver
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/Solver_worker.py
+        port: 20008
+        host: "0.0.0.0"
+
+  - TextToBbox:
+      worker_name: TextToBbox
+      job_name: text_to_bbox
+      calculate_type: control
+      cuda_visible_devices: "0"
+      cmd:
+        script-addr: ./online_workers/TextToBbox_worker.py
+        port: 20009
+        host: "0.0.0.0"
+        model-path: OpenEarthAgent/models/groundingdino_swint_ogc.pth
+        model-config: OpenEarthAgent/models/GroundingDINO_SwinT_OGC.py
+ 
+  - BaseModel:
+      worker_name: BaseModel
+      job_name: base_model
+      calculate_type: control
+      cuda_visible_devices: "0"    
+      cmd:
+        script-addr: ./online_workers/BaseModel_worker.py
+        port: 20010
+        host: "0.0.0.0"
+  
+  - ImageDescription:         
+      worker_name: ImageDescription
+      job_name: image_description
+      calculate_type: control
+      cuda_visible_devices: "0"    
+      cmd:
+        script-addr: ./online_workers/ImageDescription_worker.py
+        port: 20011                  
+        host: "0.0.0.0"
+
+  - RegionAttributeDescription:
+      worker_name: RegionAttributeDescription
+      job_name: region_attribute_description
+      calculate_type: control
+      cuda_visible_devices: "0"   
+      cmd:
+        script-addr: ./online_workers/RegionAttributeDescription_worker.py
+        port: 20012              
+        host: "0.0.0.0"
+
+  - CountGivenObject:
+      worker_name: CountGivenObject
+      job_name: count_given_object
+      calculate_type: control
+      cuda_visible_devices: "0"    
+      cmd:
+        script-addr: ./online_workers/CountGivenObject_worker.py
+        port: 20013
+        host: "0.0.0.0"
+
+  - SegmentObjectPixels:
+      worker_name: SegmentObjectPixels
+      job_name: segment_object_pixels
+      calculate_type: control
+      cuda_visible_devices: "0"    
+      cmd:
+        script-addr: ./online_workers/SegmentObjectPixels_worker.py
+        port: 20014
+        host: "0.0.0.0"
+        BaseModel-server: TextToBbox
+        sam_model_path: OpenEarthAgent/models/sam2/checkpoints/sam2.1_hiera_large.pt
+        sam_model_config: OpenEarthAgent/models/sam2/sam2/configs/sam2.1/sam2.1_hiera_l.yaml
+  
+  - ChangeDetection:
+      worker_name: ChangeDetection
+      job_name: change_detection
+      calculate_type: control
+      conda_env: cd-env
+      cuda_visible_devices: "3"  
+      cmd:
+        script-addr: ./online_workers/ChangeDetection_worker.py
+        port: 20015
+        host: "0.0.0.0"
+  
+  - ObjectDetection:
+      worker_name: ObjectDetection
+      job_name: object_detection
+      calculate_type: control
+      conda_env: cd-env
+      cuda_visible_devices: "3"
+      cmd:
+        script-addr: ./online_workers/ObjectDetection_worker.py
+        port: 20016
+        host: "0.0.0.0"
+        model-path: OpenEarthAgent/models/lae_weights/checkpoints/lae_dino_swint_lae1m-28ca3a15.pth
+        model-config: OpenEarthAgent/models/LAE-DINO/mmdetection_lae/configs/lae_dino/lae_dino_swin-t_pretrain_LAE-1M.py
+        
+  - GetAreaBoundary:
+      worker_name: GetAreaBoundary
+      job_name: get_area_boundary
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/GetAreaBoundary_worker.py
+        port: 20017
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+  - AddPoisLayer:
+      worker_name: AddPoisLayer
+      job_name: add_pois_layer
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/AddPoisLayer_worker.py
+        port: 20018
+        host: "0.0.0.0"
+
+
+  - ComputeDistance:
+      worker_name: ComputeDistance
+      job_name: compute_distance
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/ComputeDistance_worker.py
+        port: 20019
+        host: "0.0.0.0"
+  
+  - DisplayOnMap:
+      worker_name: DisplayOnMap
+      job_name: display_on_map
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/DisplayOnMap_worker.py
+        port: 20020
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output
+
+  - AddIndexLayer:
+      worker_name: AddIndexLayer
+      job_name: add_index_layer
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/AddIndexLayer_worker.py
+        port: 20021
+        host: "0.0.0.0"
+        service_account: "<service_account>"
+        key_file: OpenEarthAgent/gee_key/<key_file>
+
+  - ComputeIndexChange:
+      worker_name: ComputeIndexChange
+      job_name: compute_index_change
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/ComputeIndexChange_worker.py
+        port: 20022
+        host: "0.0.0.0"
+
+  - ShowIndexLayer:
+      worker_name: ShowIndexLayer
+      job_name: show_index_layer
+      calculate_type: control
+      cmd:
+        script-addr: ./online_workers/ShowIndexLayer_worker.py
+        port: 20023
+        host: "0.0.0.0"
+        save_path: OpenEarthAgent/tool_server/tool_workers/tools_output

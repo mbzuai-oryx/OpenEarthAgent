@@ -1,0 +1,10 @@
+requests
+pyyaml
+tqdm
+transformers
+rasterio
+geopandas
+fiona
+scipy
+matplotlib
+gradio

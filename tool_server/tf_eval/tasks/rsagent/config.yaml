@@ -1,0 +1,9 @@
+task_name: "rsagent"
+dataset_path: data/test.json
+image_dir_path: data/test_images
+num_sample: 1169
+task_type: "e2e" # e2e or step
+llm_judge: "gpt-4o-mini" 
+generation_config:
+  max_length: 256 
+
