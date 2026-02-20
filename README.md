@@ -279,6 +279,15 @@ The training script supports distributed execution and saves checkpoints to the 
 ## 📖 Citation
 
 Please cite the following if you find OpenEarthAgent helpful:
+@misc{shabbir2026openearthagent,
+      title={OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents}, 
+      author={Akashah Shabbir and Muhammad Umer Sheikh and Muhammad Akhtar Munir and Hiyam Debary and Mustansar Fiaz and Muhammad Zaigham Zaheer and Paolo Fraccaro and Fahad Shahbaz Khan and Muhammad Haris Khan and Xiao Xiang Zhu and Salman Khan},
+      year={2026},
+      eprint={2602.17665},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.17665}, 
+}
 
 ---
 
