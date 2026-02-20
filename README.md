@@ -14,8 +14,7 @@
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/OpenEarthAgent/)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2602.17665)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-F9D371)](https://huggingface.co/MBZUAI/OpenEarthAgent)
-[![GitHub stars](https://img.shields.io/github/stars/mbzuai-oryx/OpenEarthAgent?style=flat&color=fff359)](https://github.com/mbzuai-oryx/OpenEarthAgent/stargazers)
-[![GitHub license](https://img.shields.io/github/license/mbzuai-oryx/OpenEarthAgent?color=ff8080)](https://github.com/mbzuai-oryx/OpenEarthAgent/blob/main/LICENSE)
+
 
 <em> <sup> *Equal Contribution  </sup> </em>
 <br>
