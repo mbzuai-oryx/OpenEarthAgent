@@ -149,9 +149,17 @@ body {
   margin: 0 !important;
 }
 
+.video-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 #interpolation-image-wrapper {
   width: 100%;
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
