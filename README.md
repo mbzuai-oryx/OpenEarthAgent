@@ -9,7 +9,7 @@
   
 [Akashah Shabbir](https://github.com/AkashahS)\*, [Muhammad Umer Sheikh]()\*, [Muhammad Akhtar Munir](),[Hiyam Debary](),[Mustansar Fiaz](),[Muhammad Zaigham Zaheer](), [Paolo Fraccaro](), [Fahad Shahbaz Khan](), [Muhammad Haris Khan](), [Xiao Xiang Zhu]() , [Salman Khan]()
 
-**Mohamed bin Zayed University of Artificial Intelligence, IBM Research, Linköping University, Australian National University**
+**Mohamed bin Zayed University of Artificial Intelligence, IBM Research, Linköping University, Technical University Munich, Australian National University**
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/OpenEarthAgent/)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2602.17665)
