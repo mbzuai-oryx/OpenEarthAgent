@@ -14,7 +14,7 @@
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/OpenEarthAgent/)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2602.17665)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-F9D371)](https://huggingface.co/MBZUAI/OpenEarthAgent)
-
+[![Dataset](https://img.shields.io/badge/🤗_Dataset-Access-green)](https://huggingface.co/datasets/MBZUAI/OpenEarthAgent)
 
 <em> <sup> *Equal Contribution  </sup> </em>
 <br>
