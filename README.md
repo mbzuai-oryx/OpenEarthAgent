@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/OpenEarthAgent_logo_transparent.png" alt="Logo" width="400">
-  <h1 align="center">A Unified Framework for Tool-Augmented Geospatial Agents</h1>
+  <h1 align="center">[CVPR 2026 🔥] A Unified Framework for Tool-Augmented Geospatial Agents</h1>
 </div>
 
 ![](https://i.imgur.com/waxVImv.png)
