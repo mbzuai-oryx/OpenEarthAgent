@@ -293,7 +293,7 @@ Please cite the following if you find OpenEarthAgent helpful:
 ```
 ---
 
-[<img src="assets/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.com)
+[<img src="assets/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.net)
 [<img src="assets/Oryx_logo.png" width="100" height="100">](https://github.com/mbzuai-oryx)
 [<img src="assets/MBZUAI_logo.png" width="360" height="85">](https://mbzuai.ac.ae)
 
