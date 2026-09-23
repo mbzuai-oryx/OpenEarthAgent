@@ -160,7 +160,7 @@ Before launching the server, update the configuration file to match your local e
 [`tool_server/tool_workers/scripts/launch_scripts/config/all_service_example_local.yaml`](tool_server/tool_workers/scripts/launch_scripts/config/all_service_example_local.yaml)
 
 For detailed instructions on configuring tools refer to:
-- [Configure Tools](docs/tools_guide/configure_tools.md)
+- [Configure Tools](docs/tools_guide/tool_server_guide.md)
 
 ```bash
 ## Start all services
