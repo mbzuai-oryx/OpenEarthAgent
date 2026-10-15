@@ -21,6 +21,8 @@
 
 </div>
 
+https://github.com/user-attachments/assets/65bcf881-0b79-4603-b6c9-066dc3eadd0a
+
 OpenEarthAgent is a unified framework for building tool-augmented geospatial agents capable of structured, multi-step reasoning over satellite imagery and GIS data. Designed for remote sensing applications, it integrates multispectral analysis, geospatial operations, and natural-language understanding to enable interpretable, tool-driven decision making. The accompanying dataset contains 14,538 training and 1,169 evaluation instances,
 with more than 100K reasoning steps in the training split and over 7K reasoning steps in the evaluation split. It covers diverse domains including urban analysis, environmental monitoring, disaster response, and infrastructure assessment, and integrates GIS-based operations with index computations such as NDVI, NBR, and NDBI.
 <div align="center">
