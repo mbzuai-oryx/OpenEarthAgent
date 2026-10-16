@@ -35,7 +35,7 @@ with more than 100K reasoning steps in the training split and over 7K reasoning 
 
 ## 📢  Latest Updates
 - **Oct-16-2026** OpenEarthAgent demo added!
-- - **Oct-16-2026** Benchmark refined and evaluation results updated. See [Updated Benchmark Evaluation](#updated-benchmark-evaluation).
+- **Oct-16-2026** Benchmark refined and evaluation results updated. See [Updated Benchmark Evaluation](#updated-benchmark-evaluation).
 - **Feb-20-2026** OpenEarthAgent codebase is released along with evaluation and training scripts. 
 - **Feb-20-2026**: 📂 OpenEarthAgent model is released on **_HuggingFace_** [MBZUAI/OpenEarthAgent](https://huggingface.co/MBZUAI/OpenEarthAgent)
 - **Feb-20-2026**: 📜 Technical Report of OpenEarthAgent paper is released [arxiv link](https://arxiv.org/abs/2602.17665).
