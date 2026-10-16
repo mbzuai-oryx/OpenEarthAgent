@@ -34,7 +34,8 @@ with more than 100K reasoning steps in the training split and over 7K reasoning 
 ---
 
 ## 📢  Latest Updates
-- **Feb-20-2026** OpenEarthAgent demo coming soon!
+- **Oct-16-2026** OpenEarthAgent demo added!
+- - **Oct-16-2026** Benchmark refined and evaluation results updated. See [Updated Benchmark Evaluation](#updated-benchmark-evaluation).
 - **Feb-20-2026** OpenEarthAgent codebase is released along with evaluation and training scripts. 
 - **Feb-20-2026**: 📂 OpenEarthAgent model is released on **_HuggingFace_** [MBZUAI/OpenEarthAgent](https://huggingface.co/MBZUAI/OpenEarthAgent)
 - **Feb-20-2026**: 📜 Technical Report of OpenEarthAgent paper is released [arxiv link](https://arxiv.org/abs/2602.17665).
@@ -64,7 +65,23 @@ The pipeline consists of (1) automated dataset curation, (2) supervised reasonin
 </div>
 
 ---
+## Updated Benchmark Evaluation
 
+We have refined the benchmark to improve data quality and resolve identified minor errors. Reported step-by-step and end-to-end evaluation results have been updated based on the improved benchmark.
+
+### Step-by-Step Evaluation
+
+<p align="center">
+  <img src="assets/step_by_step_updated.png" alt="Updated step-by-step evaluation results" width="90%">
+</p>
+
+### End-to-End Evaluation
+
+<p align="center">
+  <img src="assets/end_to_end_updated.png" alt="Updated end-to-end evaluation results" width="100%">
+</p>
+
+---
 ## 🚀 Quick Start
 
 The framework is built around two primary modules: the `tool server`, which provides essential tool-based services, and `TF-EVAL`, the module responsible for inference and evaluation. Each module has distinct environment dependencies. The tool server must be successfully launched before executing any inference or training processes.
