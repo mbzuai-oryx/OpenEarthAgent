@@ -45,7 +45,7 @@ DISTRIBUTED_ARGS="
 # =========================
 # Launch
 # =========================
-torchrun $DISTRIBUTED_ARGS scripts/train.py \
+torchrun $DISTRIBUTED_ARGS scripts/train/train.py \
   --output_dir ${OUTPUT_DIR} \
   --model_name_or_path ${MODEL_PATH} \
   --data_files ${DATA_PATH} \
